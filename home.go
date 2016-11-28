@@ -21,5 +21,5 @@ func home(ctx *iris.Context) {
 		}
 	}
 
-	ctx.Render("home.html", map[string]interface{}{"URLrandom": string(randomRoute)})
+	ctx.Render("home.html", map[string]interface{}{"hostname": ctx.HostString, "URLrandom": string(randomRoute)})
 }

@@ -5,8 +5,8 @@
 <body>
 	<h1>Welcome to {{url}}</h1>
 
-	<form method="post" action="{{url}}">
-		<textarea name="content" {% if taken %} readonly {% endif %}>{% if taken %} {{ msg }} {% endif %}</textarea>
+	<form method="post" action="/url/{{url}}">
+		<textarea name="msg" {% if taken %} readonly {% endif %}>{% if taken %} {{ msg }} {% endif %}</textarea>
 		{% if !taken %}
 			<input type="submit" rows="20" columns="80" value="Save">
 		{% endif %}

@@ -26,15 +26,13 @@ func main() {
 	//Home
 	iris.Get("/", home)
 
-	//getURL
-	iris.Get("/:url", getUrl)
-	//iris.POST("/:url", postUrl)
+	iris.Get("/url/:url", getUrl)
+	iris.Post("/url/:url", postUrl)
+
+	iris.Get("/result/:url", func(ctx *iris.Context) {
+		ctx.Render("result.html", map[string]interface{}{"url": ctx.Param("url")})
+	})
 
 	//Listen
 	iris.Listen(":8080")
-}
-
-func getUrl(ctx *iris.Context) {
-	url := ctx.Param("url")
-	ctx.Render("url.html", map[string]interface{}{"url": string(url), "taken": false, "msg": false})
 }
