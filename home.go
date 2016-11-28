@@ -16,8 +16,7 @@ func home(ctx *iris.Context) {
 		for i := range randomRoute {
 			randomRoute[i] = list[rand.Intn(len(list))]
 		}
-		_, err := checkURL(db, string(randomRoute))
-		if err != nil { //If the url is not taken stop the cycle
+		if _, err := checkURL(db, string(randomRoute)); err != nil { //If the url is not taken stop the cycle
 			break
 		}
 	}
