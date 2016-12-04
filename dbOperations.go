@@ -89,8 +89,6 @@ func deleteUrl(db *sql.DB, id int) {
 	}
 	defer stmt.Close()
 
-	log.Printf("Cancello id: %d\n", id)
-
 	_, err = stmt.Exec(id)
 	if err != nil {
 		log.Panic(err)
