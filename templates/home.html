@@ -1,8 +1,31 @@
 <!DOCTYPE html>
 <head>
 	<title>Glip - Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>Url Generated for you: http://{{ hostname  }}/url/{{ URLrandom }} </h1>
+	<div class="columns">
+		<div class="column is-half is-offset-one-quarter">
+			<div class="content">
+				<p class="title is-1 has-text-centered"><strong>Glip</strong></p>
+				<p class="subtitle is-5 has-text-centered">Copy and Paste from and to everywhere through internet</p>
+				<p>Glip lets you move information between computers using unique links</p>
+				<p>Example: <a class="button is-small is-dark" href="http://{{hostname}}/url/{{URLrandom}}">http://{{hostname}}/url/{{URLrandom}}</a>.</br>
+				   Visit the URL and paste in what you want.</br>
+				   In another computer/device visit the same URL to retrieve the information.</p>
+			   	<p>For your security the information saved on the URL will be destroyed after you've been read it.</br>
+				   Anyone visiting the same URL at a later time will not be able to see your information (already gone forever).</p>
+			   	<p>You can use Glip to move data between devices without using e-mail, move some clipboard datas between two seperate computers.</p>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p><strong>Glip</strong>: made with <i class="fa fa-heart"></i> by <a href="https://domenicoluciani.com">Domenico Luciani</a><p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

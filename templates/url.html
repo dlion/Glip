@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <head>
 	<title>Glip - {{url}}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>Welcome to {{url}}</h1>
+	<div class="columns">
+		<div class="column is-half is-offset-one-quarter">
+			<div class="content">
+				<p class="title is-1 has-text-centered"><strong>Glip</strong></p>
+				<p class="subtitle is-5 has-text-centered">
+					{% if taken %}
+						Here you are! Be careful, these datas has already been destroyed.
+					{% else %}
+						This URL is empty! Paste your datas in the textarea and save your unique URL.
+					{% endif %}
+				</p>
+			</div>
+			<form method="post" action="http://{{hostname}}/url/{{url}}">
+				<p class="control">
+					<textarea class="textarea is-large is-info" name="msg" {% if taken %} disabled {% endif %}>{% if taken %} {{ msg }} {% endif %}</textarea>
+				</p>
+				<p class="control">
+					{% if !taken %}
+					<button class="button is-info is-outlined">Save</button>
+					{% endif %}
+				</p>
+			</form>
+		</div>
+	</div>
 
-	<form method="post" action="/url/{{url}}">
-		<textarea name="msg" {% if taken %} readonly {% endif %}>{% if taken %} {{ msg }} {% endif %}</textarea>
-		{% if !taken %}
-			<input type="submit" rows="20" columns="80" value="Save">
-		{% endif %}
-	</form>
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p><strong>Glip</strong>: made with <i class="fa fa-heart"></i> by <a href="https://domenicoluciani.com">Domenico Luciani</a><p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

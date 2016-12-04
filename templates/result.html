@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <head>
-	<title>Glip - Result</title>
+	<title>Glip - Result - {{ url  }}</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>You URL has been created: {{ url }} </h1>
+	<div class="columns">
+		<div class="column is-half is-offset-one-quarter">
+			<div class="content">
+				<p class="title is-1 has-text-centered"><strong>Glip</strong></p>
+				<p class="subtitle is-5 has-text-centered">You URL has been created: <div class="box"><span class="title is-5">http://{{ hostname }}/url/{{ url }}</span></div></p>.
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p><strong>Glip</strong>: made with <i class="fa fa-heart"></i> by <a href="https://domenicoluciani.com">Domenico Luciani</a><p>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>
