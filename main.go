@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"math/rand"
 	"time"
 
@@ -11,6 +12,8 @@ import (
 func main() {
 
 	rand.Seed(time.Now().UnixNano())
+	port := flag.String("p", "8080", "The port")
+	flag.Parse()
 
 	//Conf
 	iris.UseTemplate(django.New()).Directory("./templates", ".html")
@@ -34,5 +37,5 @@ func main() {
 	})
 
 	//Listen
-	iris.Listen(":8080")
+	iris.Listen(":" + (*port))
 }
