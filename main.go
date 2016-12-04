@@ -30,7 +30,7 @@ func main() {
 	iris.Post("/url/:url", postUrl)
 
 	iris.Get("/result/:url", func(ctx *iris.Context) {
-		ctx.Render("result.html", map[string]interface{}{"url": ctx.Param("url")})
+		ctx.Render("result.html", map[string]interface{}{"url": ctx.Param("url"), "hostname": ctx.HostString})
 	})
 
 	//Listen

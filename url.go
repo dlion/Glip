@@ -37,5 +37,5 @@ func getUrl(ctx *iris.Context) {
 		id, _ := strconv.Atoi(infos[0])
 		deleteUrl(db, id)
 	}
-	ctx.Render("url.html", map[string]interface{}{"url": string(url), "taken": taken, "msg": msg})
+	ctx.Render("url.html", map[string]interface{}{"url": string(url), "taken": taken, "msg": msg, "hostname": ctx.HostString})
 }
