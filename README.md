@@ -31,16 +31,28 @@ Done, after that site.com/url/your+unique+url will be empty again
 
 `./Glip -p 8080`
 
-## Author
+## Screens
 
-Domenico "DLion" Luciani [https://domenicoluciani.com](https://domenicoluciani.com)
+![screen1](screen1.png)
 
-## License
-MIT
+![screen2](screen2.png)
 
-## Future ?
+![screen3](screen3.png)
+
+![screen4](screen4.png)
+
+## Future
 
 * Dockerfile
 * Better front-end
 * From SQLite to NoSQL database (?)
 * Demo
+
+## Author
+
+Domenico "DLion" Luciani
+
+[https://domenicoluciani.com](https://domenicoluciani.com)
+
+## License
+MIT
