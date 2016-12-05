@@ -1,10 +1,10 @@
 # Glip
 
-## Your clipboard on the internet
+### Your clipboard on the internet
 
-Glip allows you to share between two devices datas in a clean and easy way.
+Glip allows you to share between two devices data in a clean and easy way. [Read the article](https://domenicoluciani.com/2016/12/05/glip.html)
 
-You can choose which unique url use and to save datas in it, after that you can share your own link with everybody and once that the link has been open... POFF! All datas in that url will be destroyed forever.
+You can choose which unique url use and to save datas in it, after that you can share your own link with everybody and once that the link has been open... *POFF*! All datas in that url will be destroy forever.
 
 ## Example
 
