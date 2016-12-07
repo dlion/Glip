@@ -17,7 +17,7 @@
 					{% endif %}
 				</p>
 			</div>
-			<form method="post" action="http://{{hostname}}/url/{{url}}">
+			<form method="post" action="{{hostname}}/url/{{url}}">
 				<p class="control">
 					<textarea class="textarea is-large is-info" name="msg" {% if taken %} disabled {% endif %}>{% if taken %} {{ msg }} {% endif %}</textarea>
 				</p>
