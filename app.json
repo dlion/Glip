@@ -1,0 +1,14 @@
+{
+  "name": "Glip",
+  "description": "Your clipboard on the internet",
+  "keywords": [
+    "glip",
+    "go",
+    "clipboard",
+    "internet"
+  ],
+  "image": "heroku/go:1.7",
+  "mount_dir": "src/github.com/dlion/glip",
+  "website": "http://github.com/dlion/glip",
+  "repository": "http://github.com/dlion/glip"
+}
